@@ -18,16 +18,16 @@
 Connect to your raspberry pi via ssh:
 
 ``` bash
-cd /home/pi
-git clone https://github.com/BLeeEZ/rpi-kvm.git
+cd ~
+git clone https://github.com/aarzaak/rpi-kvm.git
 cd rpi-kvm
-sudo ./rpi-kvm.sh install
+./rpi-kvm.sh install
 ```
 
 ### Step 2: Start the RPI-K(V)M service
 
 ``` bash
-sudo ./rpi-kvm.sh start
+./rpi-kvm.sh start
 ```
 
 ### Step 3: Optional steps
