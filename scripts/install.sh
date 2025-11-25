@@ -15,7 +15,6 @@ sudo apt install bluez bluez-tools bluez-firmware python3-bluez -y
 echo "Install required python packages via apt"
 sudo apt install python3-pyudev python3-evdev python3-dbus python3-dbus-next python3-aiohttp python3-rpi.gpio python3-numpy python3-gi -y
 echo "Install nodejs"
-sudo apt update
 sudo apt install -y ca-certificates curl gnupg
 sudo mkdir -p /etc/apt/keyrings
 # --yes allows overwriting if re-running the script (to repair a broken install or get new fixes)
