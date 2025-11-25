@@ -7,24 +7,24 @@ function fail {
 
 echo "### RPI-KVM Install ##############"
 echo "--- RPI-KVM Dependency Install ---"
-echo "Install required basic packages via apt-get"
+echo "Install required basic packages via apt"
 sudo apt update
-sudo apt-get install git tmux python-is-python3 python3 python3-dev python3-pip -y
-echo "Install required bluetooth packages via apt-get"
-sudo apt-get install bluez bluez-tools bluez-firmware python3-bluez -y
-echo "Install required python packages via apt-get"
-sudo apt-get install python3-pyudev python3-evdev python3-dbus python3-dbus-next python3-aiohttp python3-rpi.gpio python3-numpy python3-gi -y
+sudo apt install git tmux python-is-python3 python3 python3-dev python3-pip -y
+echo "Install required bluetooth packages via apt"
+sudo apt install bluez bluez-tools bluez-firmware python3-bluez -y
+echo "Install required python packages via apt"
+sudo apt install python3-pyudev python3-evdev python3-dbus python3-dbus-next python3-aiohttp python3-rpi.gpio python3-numpy python3-gi -y
 echo "Install nodejs"
-sudo apt-get update
-sudo apt-get install -y ca-certificates curl gnupg
+sudo apt update
+sudo apt install -y ca-certificates curl gnupg
 sudo mkdir -p /etc/apt/keyrings
 # --yes allows overwriting if re-running the script (to repair a broken install or get new fixes)
 curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor --yes -o /etc/apt/keyrings/nodesource.gpg
 # This can be changed to a newer supported version once tested
 NODE_MAJOR=16
 echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
-sudo apt-get update
-sudo apt-get install nodejs -y
+sudo apt update
+sudo apt install nodejs -y
 echo "--- Dependency Install Done ------"
 
 echo "--- RPI-KVM Configuration Step ---"
